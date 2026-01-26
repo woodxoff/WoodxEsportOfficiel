@@ -20,7 +20,6 @@
             background-attachment: fixed;
         }
         #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
-
         header {
             position: fixed;
             top: 0;
@@ -72,9 +71,7 @@
             margin: 30px 0;
         }
         .mobile-menu a:hover { color: #44a337; }
-
         .container { max-width: 1400px; margin: 0 auto; padding: 0 50px; }
-
         .hero {
             min-height: 100vh;
             display: flex;
@@ -125,7 +122,6 @@
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
-
         .section {
             padding: 180px 0;
             text-align: center;
@@ -146,7 +142,6 @@
             max-width: 900px;
             margin: 0 auto 100px;
         }
-
         .cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -166,7 +161,6 @@
         }
         .card i { font-size: 70px; color: #44a337; margin-bottom: 30px; }
         .card h3 { font-size: 28px; margin-bottom: 20px; }
-
         .history {
             background: transparent;
             padding: 80px;
@@ -177,7 +171,6 @@
             font-size: 20px;
             line-height: 1.8;
         }
-
         .social-icons a {
             color: #fff;
             font-size: 50px;
@@ -188,7 +181,6 @@
             color: #44a337;
             transform: translateY(-10px);
         }
-
         .recruitment-form {
             max-width: 800px;
             margin: 80px auto;
@@ -215,13 +207,11 @@
             background: #52c442;
             transform: scale(1.05);
         }
-
         footer {
             background: transparent;
             padding: 80px 0 40px;
             text-align: center;
         }
-
         /* ROSTER */
         .roster-section {
             background: transparent;
@@ -325,7 +315,6 @@
             color: #39ff14;
             transform: scale(1.3);
         }
-
         /* ACTUALITÉS + MENU + PLEIN ÉCRAN */
         .grid-actualites {
             display: grid;
@@ -382,7 +371,6 @@
             background: #4CAF50;
             transform: translateY(-3px);
         }
-
         #menu-posts {
             display: none;
             position: fixed;
@@ -448,7 +436,6 @@
             background: #4CAF50;
             transform: scale(1.1);
         }
-
         #full-post {
             display: none;
             position: fixed;
@@ -490,7 +477,6 @@
             font-size: 1.15rem;
             line-height: 1.7;
         }
-
         .videos { margin: 80px 0 60px; }
         .videos h3 { font-size: 2.2rem; margin-bottom: 30px; color: #A5D6A7; text-align: center; }
         .slider {
@@ -558,7 +544,6 @@
             border-left: 22px solid #A5D6A7;
             margin-left: 5px;
         }
-
         @media (max-width: 1024px) {
             .hero { flex-direction: column; text-align: center; }
             .globe-img { max-width: 80%; margin-top: 60px; }
@@ -568,11 +553,11 @@
         }
         @media (max-width: 900px) { .grid-actualites { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 600px) { .grid-actualites { grid-template-columns: 1fr; } .video-card { flex: 0 0 90%; } }
+        img { max-width: 100%; height: auto; }
     </style>
 </head>
 <body>
 <div id="particles-js"></div>
-
 <header id="header">
     <div class="logo">WOODX</div>
     <nav>
@@ -584,15 +569,13 @@
     </nav>
     <div class="hamburger" onclick="toggleMobileMenu()">☰</div>
 </header>
-
 <div class="mobile-menu" id="mobileMenu">
-    <a href="#avantages">Avantages</a>
-    <a href="#roster">Roster</a>
-    <a href="#actualites">Actualites</a>
-    <a href="#recrutement">Recrutement</a>
-    <a href="#boutique">Boutique</a>
+    <a href="#avantages" onclick="toggleMobileMenu()">Avantages</a>
+    <a href="#roster" onclick="toggleMobileMenu()">Roster</a>
+    <a href="#actualites" onclick="toggleMobileMenu()">Actualites</a>
+    <a href="#recrutement" onclick="toggleMobileMenu()">Recrutement</a>
+    <a href="#boutique" onclick="toggleMobileMenu()">Boutique</a>
 </div>
-
 <section class="hero container">
     <div class="hero-content">
         <h1>DOMINEZ LA COMPETITION</h1>
@@ -604,7 +587,6 @@
     </div>
     <img src="https://i.postimg.cc/zGJHv7vM/Logo.png" alt="Logo WoodX" class="globe-img">
 </section>
-
 <section class="section container" id="avantages">
     <h2 style="color:#A5FF8D; text-shadow: 0 0 20px rgba(165,255,140,0.4);">POURQUOI REJOINDRE WOODX ?</h2>
     <p style="color:#A5FF8D; opacity:0.9;">Une team fortnite Esport ambitieuse et complète à la hauteur de vos attente</p>
@@ -641,9 +623,6 @@
         </div>
     </div>
 </section>
-
-
-
 <section class="section container">
     <h2 style="color:#A5FF8D; text-shadow: 0 0 20px rgba(165,255,140,0.4);">NOTRE HISTOIRE</h2>
     <div class="history">
@@ -660,16 +639,12 @@
         <p>Avec un encadrement professionnel, des objectifs ambitieux et une mentalite gagnante, WOODX est plus qu'une team : c'est une famille de competiteurs prêts à tout donner pour la victoire.</p>
     </div>
 </section>
-
-
-
 <!-- ROSTER COMPLET (20 membres) -->
 <section id="roster" class="section container roster-section">
     <h2 style="color:#A5FF8D; text-shadow: 0 0 20px rgba(165,255,140,0.4);">ROSTER WOODX</h2>
     <p style="color:#A5FF8D; opacity:0.9;">Rencontrez les talents qui composent notre team Fortnite compétitive</p>
 </section>
-   
-
+  
 <div class="roster-grid">
     <!-- Carte 1 -->
     <div class="roster-card">
@@ -688,7 +663,6 @@
             <a href="https://x.com/Nyrr332508"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
-
     <!-- Carte 2 -->
     <div class="roster-card">
         <img src="https://i.postimg.cc/vBsGCSnL/ddlj4d.jpg" alt="Birox" class="roster-avatar">
@@ -706,7 +680,6 @@
             <a href="https://x.com/birox00"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
-
     <!-- Carte 3 -->
     <div class="roster-card">
         <img src="https://i.postimg.cc/tJ9CnmC7/IMG-2685.png" alt="M2TS" class="roster-avatar">
@@ -725,7 +698,6 @@
         </div>
     </div>
 </div>
-
 <!-- Deuxième grille -->
 <div class="roster-grid" style="margin-top: 60px;">
     <!-- Carte 4 -->
@@ -745,7 +717,6 @@
             <a href="https://x.com/OuEmir43411"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
-
     <!-- Carte 5 -->
     <div class="roster-card">
         <img src="https://i.postimg.cc/85jGxJPG/59E2EDDD-CF00-4F54-BCC2-75BBFF1C7C68.jpg" alt="NitroxS" class="roster-avatar">
@@ -763,7 +734,6 @@
             <a href="https://x.com/WdxNitrox"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
-
     <!-- Carte 6 -->
     <div class="roster-card">
         <img src="https://i.postimg.cc/tCLzxLVY/96e4510d99f1b625e67076c91960f3a5.jpg" alt="Max" class="roster-avatar">
@@ -781,7 +751,6 @@
             <a href="https://x.com/wdx2hs_max"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
-
     <!-- Carte 7 -->
     <div class="roster-card">
         <img src="https://i.postimg.cc/52p9QMXf/ffdfd35a5147b23f1cc5422afb159055.jpg" alt="Owen" class="roster-avatar">
@@ -799,7 +768,6 @@
             <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
-
     <!-- Carte 8 -->
     <div class="roster-card">
         <img src="https://i.postimg.cc/43BKG96Q/79e3178d51bf55f71fa07390eccf0254.jpg" alt="Aka" class="roster-avatar">
@@ -817,7 +785,6 @@
             <a href="https://x.com/akariisx"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
-
     <!-- Carte 9 -->
     <div class="roster-card">
         <img src="https://i.postimg.cc/y8bYmC7J/birdipng.png" alt="Zyolxy" class="roster-avatar">
@@ -835,7 +802,6 @@
             <a href="https://x.com/akariisx"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
-
     <!-- Carte 10 -->
     <div class="roster-card">
         <img src="https://i.postimg.cc/NMc59F9H/A7386576-AF03-4ADC-BC41-2C8837A46FB2.png" alt="Basxle" class="roster-avatar">
@@ -853,7 +819,6 @@
             <a href="https://x.com/basxle"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
-
     <!-- Carte 11 -->
     <div class="roster-card">
         <img src="https://i.postimg.cc/zGmxVVgZ/Pixel.jpg" alt="Pixel" class="roster-avatar">
@@ -871,7 +836,6 @@
             <a href="https://www.youtube.com/@pixelgamer855"><i class="fab fa-youtube"></i></a>
         </div>
     </div>
-
     <!-- Carte 12 -->
     <div class="roster-card">
         <img src="https://i.postimg.cc/Df9NbC9g/Clezz.jpg" alt="Clezz" class="roster-avatar">
@@ -889,7 +853,6 @@
             <a href="https://x.com/clementsau98907?s=11"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
-
     <!-- Carte 13 -->
     <div class="roster-card">
         <img src="https://i.postimg.cc/DzzWdcV7/stay.png" alt="Stay" class="roster-avatar">
@@ -907,7 +870,6 @@
             <a href="https://x.com/Stayyfv"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
-
     <!-- Carte 14 -->
     <div class="roster-card">
         <img src="https://i.postimg.cc/WbJh54f3/JOJO.jpg" alt="Jojo" class="roster-avatar">
@@ -923,7 +885,6 @@
             <a href="https://www.tiktok.com/@wxdjojo3999"><i class="fab fa-tiktok"></i></a>
         </div>
     </div>
-
     <!-- Carte 15 -->
     <div class="roster-card">
         <img src="https://i.postimg.cc/BZmVmSPw/2be22924569a4b913edb7373a4576c82.jpg" alt="Nael" class="roster-avatar">
@@ -941,26 +902,23 @@
             <a href="https://x.com/NaelFN"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
-
     <!-- Carte 16 – Nouveau -->
-            <div class="roster-card">
-                <img src="https://i.postimg.cc/28Z8YKY5/0268177b1381bccf4c17edf65c0c4ed7.jpg" alt="Uzer" class="roster-avatar">
-                <div class="roster-name">Uzer</div>
-                <div class="roster-role">Espoir</div>
-                <p class="roster-bio">Joueur fortnite competitif pour la WOODX Esport.</p>
-                <div class="roster-tags">
-                    <span class="roster-tag">Player</span>
-                    <span class="roster-tag">Igl</span>
-                    <span class="roster-tag">100PR</span>
-                </div>
-                <div class="roster-social">
-                     <a href="https://www.twitch.tv/kifnnnnn"><i class="fab fa-twitch"></i></a>
-                    <a href="https://www.youtube.com/@naeligl321"><i class="fab fa-youtube"></i></a>
-                    <a href="https://x.com/NexioWDX"><i class="fab fa-twitter"></i></a>
-                   </div>
-                </div>
-
-
+    <div class="roster-card">
+        <img src="https://i.postimg.cc/28Z8YKY5/0268177b1381bccf4c17edf65c0c4ed7.jpg" alt="Uzer" class="roster-avatar">
+        <div class="roster-name">Uzer</div>
+        <div class="roster-role">Espoir</div>
+        <p class="roster-bio">Joueur fortnite competitif pour la WOODX Esport.</p>
+        <div class="roster-tags">
+            <span class="roster-tag">Player</span>
+            <span class="roster-tag">Igl</span>
+            <span class="roster-tag">100PR</span>
+        </div>
+        <div class="roster-social">
+            <a href="https://www.twitch.tv/kifnnnnn"><i class="fab fa-twitch"></i></a>
+            <a href="https://www.youtube.com/@naeligl321"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/NexioWDX"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
     <!-- Carte 16 -->
     <div class="roster-card">
         <img src="https://i.postimg.cc/L8xJ84vQ/pp.jpg" alt="Estet" class="roster-avatar">
@@ -978,7 +936,6 @@
             <a href="https://x.com/shedi_19"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
-
     <!-- Carte 17 -->
     <div class="roster-card">
         <img src="https://i.postimg.cc/TY48dZgh/PP2.png" alt="Solon4h" class="roster-avatar">
@@ -990,14 +947,12 @@
             <span class="roster-tag">Igl</span>
             <span class="roster-tag">200PR</span>
         </div>
-       <div class="roster-social">
+        <div class="roster-social">
             <a href="https://www.twitch.tv/no4hdfl"><i class="fab fa-twitch"></i></a>
             <a href="https://www.youtube.com/@Lunixxfn"><i class="fab fa-youtube"></i></a>
             <a href="https://x.com/shedi_19"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
-
-
     <!-- Carte 18 -->
     <div class="roster-card">
         <img src="https://i.postimg.cc/qRRXvZ8L/Chat-GPT-Image-24-janv-2026-18-07-47.png" alt="Xoti" class="roster-avatar">
@@ -1015,8 +970,6 @@
             <a href="https://x.com/nxt_nxoti?s=21"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
-
-
     <!-- Carte 19 -->
     <div class="roster-card">
         <img src="https://i.postimg.cc/Gh07XdFK/a4eb77b4d954a40138986595a4d6147b.jpg" alt="Nowx" class="roster-avatar">
@@ -1029,48 +982,38 @@
             <span class="roster-tag">0PR</span>
         </div>
         <div class="roster-social">
-            <a href=" https://www.twitch.tv/nowxxtv"><i class="fab fa-twitch"></i></a>
+            <a href="https://www.twitch.tv/nowxxtv"><i class="fab fa-twitch"></i></a>
             <a href="https://www.youtube.com/@cl.mgrd57"><i class="fab fa-youtube"></i></a>
-            <a href=" https://x.com/clmgrd_"><i class="fab fa-twitter"></i></a>
+            <a href="https://x.com/clmgrd_"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
-
-   
-        </div>
-    </div>
-</section>
-</section></section>
+</div>
 
 <!-- ACTUALITÉS -->
 <section class="section container" id="actualites">
     <h2 style="color:#A5FF8D; text-shadow: 0 0 20px rgba(165,255,140,0.4);">ACTUALITÉS</h2>
-
     <div class="grid-actualites">
       <div class="card-actu" style="background-image: url('https://i.postimg.cc/Vvx7Mg7r/672657-v2.jpg');" data-img="https://i.postimg.cc/Vvx7Mg7r/672657-v2.jpg">
         <div class="content-actu">
           <h3 style="color:white;">WOODX ACCUEIL 11 NOUVEAUX JOUEURS, DONT 7 TRAINING CENTER C’EST ÉNORME</h3>
         </div>
       </div>
-
       <div class="card-actu" style="background-image: url('https://i.postimg.cc/JzwnD8Ks/X.webp');" data-img="https://i.postimg.cc/JzwnD8Ks/X.webp">
         <div class="content-actu">
           <h3 style="color:white;">WOODX ESPORT VIENS DE POSTER UN NOUVEAU TWEET</h3>
         </div>
       </div>
-
       <div class="card-actu" style="background-image: url('https://p3.hippopx.com/preview/209/992/gaming-setup-competitive-esports-high-tech-gaming-pcs-rgb-lighting-gaming-chairs-gaming-house-esports-setup-gaming-environment-competitive-gaming.jpg');" data-img="https://p3.hippopx.com/preview/209/992/gaming-setup-competitive-esports-high-tech-gaming-pcs-rgb-lighting-gaming-chairs-gaming-house-esports-setup-gaming-environment-competitive-gaming.jpg">
         <div class="content-actu">
           <h3 style="color:white;">RECRUTEMENT OUVERT : WOODX RECHERCHE DE NOUVEAU JOUEUR TRAINING CENTER, CASTEUR, MONTEUR ET GRAPHISTE</h3>
         </div>
       </div>
-
       <div class="card-actu" style="background-image: url('https://i.postimg.cc/d054nwHK/1-1769255778682-e3454.png');" data-img="https://i.postimg.cc/d054nwHK/1-1769255778682-e3454.png">
         <div class="content-actu">
           <h3 style="color:white;">BOUTIQUE WOODX : LA BOUTIQUE SERA DISPONIBLE TRÉS BIENTÔT</h3>
         </div>
       </div>
     </div>
-
     <div id="menu-posts">
       <button class="close-menu-btn" id="close-menu">×</button>
       <h2 style="color:white;">Tous les articles</h2>
@@ -1079,31 +1022,26 @@
           <h3 style="color:white;">WOODX ACCUEIL 11 NOUVEAUX JOUEURS, DONT 7 TRAINING CENTER C’EST ÉNORME</h3>
           <p style="color:white;">La WOODX Esport accueille 11 nouveaux membres talentueux, dont 7 du Training Center...</p>
         </div>
-
         <div class="complete-mini-card" data-img="https://i.postimg.cc/JzwnD8Ks/X.webp" data-title="WOODX ESPORT VIENS DE POSTER UN NOUVEAU TWEET" data-text="L'équipe WOODX a partagé un nouveau tweet sur X. Une annonce importante concernant les prochains tournois et la line-up. À lire absolument !">
           <h3 style="color:white;">WOODX ESPORT VIENS DE POSTER UN NOUVEAU TWEET</h3>
           <p style="color:white;">L'équipe WOODX vient de poster un tweet important sur X...</p>
         </div>
-
         <div class="complete-mini-card" data-img="https://p3.hippopx.com/preview/209/992/gaming-setup-competitive-esports-high-tech-gaming-pcs-rgb-lighting-gaming-chairs-gaming-house-esports-setup-gaming-environment-competitive-gaming.jpg" data-title="RECRUTEMENT OUVERT : WOODX RECHERCHE DE NOUVEAU JOUEUR TRAINING CENTER, CASTEUR, MONTEUR ET GRAPHISTE" data-text="On recrute activement ! Joueurs compétitifs, casters, monteurs vidéo et graphistes : postulez maintenant si vous veux rejoindre une structure ambitieuse.">
           <h3 style="color:white;">RECRUTEMENT OUVERT : WOODX RECHERCHE DE NOUVEAU JOUEUR TRAINING CENTER, CASTEUR, MONTEUR ET GRAPHISTE</h3>
           <p style="color:white;">Recrutement ouvert : joueurs, casters, monteurs et graphistes...</p>
         </div>
-
         <div class="complete-mini-card" data-img="https://i.postimg.cc/d054nwHK/1-1769255778682-e3454.png" data-title="BOUTIQUE WOODX : LA BOUTIQUE SERA DISPONIBLE TRÉS BIENTÔT" data-text="La boutique officielle arrive très bientôt ! Merch exclusif, hoodies, t-shirts, stickers et plus... Soyez prêts, ça va valoir le coup !">
           <h3 style="color:white;">BOUTIQUE WOODX : LA BOUTIQUE SERA DISPONIBLE TRÉS BIENTÔT</h3>
           <p style="color:white;">La boutique officielle WOODX arrive très bientôt avec du merch exclusif...</p>
         </div>
       </div>
     </div>
-
     <div id="full-post">
       <button class="close-full" id="close-full" style="color:white;">× Fermer</button>
       <img id="full-image" src="" alt="Image de l'article">
       <h3 id="full-title" style="color:white;"></h3>
       <p id="full-text" style="color:white;"></p>
     </div>
-
     <div class="videos">
   <h3 style="color:#A5FF8D; text-shadow: 0 0 20px rgba(165,255,140,0.4);">Dernières vidéos</h3>
   <div class="slider">
@@ -1130,26 +1068,21 @@
       </div>
     </div>
 </section>
-
-
-
 <!-- RECRUTEMENT -->
 <section class="section container" id="recrutement">
     <h2 style="color:#A5FF8D; text-shadow: 0 0 20px rgba(165,255,140,0.4);">NOUS REJOINDRE ?</h2>
     <p style="color:white;">Le recrutement est ouvert ! Postule maintenant et montre-nous ton niveau.</p>
-
     <form class="recruitment-form" id="recruitmentForm">
-        <input type="text"     name="pseudo"   placeholder="Pseudo Epic Games" required style="color:white;">
-        <input type="number"   name="age"      placeholder="Âge" min="13" required style="color:white;">
-        <input type="text"     name="rang"     placeholder="Rang actuel (Elite, Champion, Unreal...)" required style="color:white;">
-        <input type="text"     name="discord"  placeholder="Discord (pseudo#1234)" required style="color:white;">
-        <input type="url"      name="tracker"  placeholder="Lien Fortnite Tracker" required style="color:white;">
+        <input type="text" name="pseudo" placeholder="Pseudo Epic Games" required style="color:white;">
+        <input type="number" name="age" placeholder="Âge" min="13" required style="color:white;">
+        <input type="text" name="rang" placeholder="Rang actuel (Elite, Champion, Unreal...)" required style="color:white;">
+        <input type="text" name="discord" placeholder="Discord (pseudo#1234)" required style="color:white;">
+        <input type="url" name="tracker" placeholder="Lien Fortnite Tracker" required style="color:white;">
         <textarea name="message" rows="7" placeholder="Pourquoi veux-tu rejoindre WoodX ? (expérience, stats, motivations...)" required style="color:white;"></textarea>
-        
+       
         <button type="submit" class="btn-submit" style="color:white;">Postuler maintenant</button>
     </form>
 </section>
-
 <style>
     .recruitment-form {
         max-width: 760px;
@@ -1157,183 +1090,72 @@
         display: grid;
         gap: 22px;
     }
-
     .recruitment-form input,
     .recruitment-form textarea {
         padding: 16px 20px;
         font-size: 1.05rem;
-        color: white;                     /* texte blanc */
-        background: rgba(93, 64, 51, 0.65); /* brun semi-transparent */
-        border: 1px solid #8BC34A;          /* bordure vert clair */
+        color: white;
+        background: rgba(93, 64, 51, 0.65);
+        border: 1px solid #8BC34A;
         border-radius: 12px;
         transition: all 0.25s ease;
         font-family: 'Roboto', sans-serif;
     }
-
     .recruitment-form input:focus,
     .recruitment-form textarea:focus {
         outline: none;
-        border-color: #AED581;              /* vert clair plus lumineux au focus */
+        border-color: #AED581;
         box-shadow: 0 0 0 3px rgba(139, 195, 74, 0.35);
         background: rgba(93, 64, 51, 0.8);
     }
-
     .recruitment-form ::placeholder {
-        color: rgba(255,255,255,0.65);   /* placeholder blanc doux */
+        color: rgba(255,255,255,0.65);
         opacity: 1;
     }
-
     .recruitment-form textarea {
         resize: vertical;
         min-height: 135px;
     }
-
     .btn-submit {
         justify-self: center;
         min-width: 240px;
         padding: 16px 48px;
         font-size: 1.15rem;
         font-weight: 600;
-        color: white;                     /* texte blanc */
-        background: linear-gradient(135deg, #5D4037 0%, #7CB342 100%); /* brun → vert clair */
+        color: white;
+        background: linear-gradient(135deg, #5D4037 0%, #7CB342 100%);
         border: none;
         border-radius: 50px;
         cursor: pointer;
         transition: all 0.3s ease;
         box-shadow: 0 6px 20px rgba(93, 64, 51, 0.4);
     }
-
     .btn-submit:hover {
         background: linear-gradient(135deg, #6D4C41 0%, #8BC34A 100%);
         transform: translateY(-3px);
         box-shadow: 0 12px 35px rgba(139, 195, 74, 0.45);
     }
-
     .btn-submit:active {
         transform: translateY(0);
         box-shadow: 0 6px 20px rgba(93, 64, 51, 0.5);
     }
-
-    /* Amélioration responsive */
     @media (max-width: 600px) {
-        .recruitment-form {
-            gap: 18px;
-        }
-        .btn-submit {
-            min-width: 100%;
-        }
+        .recruitment-form { gap: 18px; }
+        .btn-submit { min-width: 100%; }
     }
 </style>
-
-
-
-<style>
-  /* === MODIFICATION COULEUR ACTUALITÉS === */
-  #actualites > h2 {
-    font-weight: 700;
-    font-size: 3rem;
-    background: linear-gradient(90deg, #c4f3ca 0%, #37993a 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-  }
-
-  /* Garde tes styles existants ici (je ne touche pas aux autres styles) */
-
-  .recruitment-form {
-      max-width: 760px;
-      margin: 60px auto 0;
-      display: grid;
-      gap: 22px;
-  }
-
-  .recruitment-form input,
-  .recruitment-form textarea {
-      padding: 16px 20px;
-      font-size: 1.05rem;
-      color: #e8f5e9;                     /* texte vert très clair */
-      background: rgba(93, 64, 51, 0.65); /* brun semi-transparent */
-      border: 1px solid #8BC34A;          /* bordure vert clair */
-      border-radius: 12px;
-      transition: all 0.25s ease;
-      font-family: 'Roboto', sans-serif;
-  }
-
-  .recruitment-form input:focus,
-  .recruitment-form textarea:focus {
-      outline: none;
-      border-color: #AED581;              /* vert clair plus lumineux au focus */
-      box-shadow: 0 0 0 3px rgba(139, 195, 74, 0.35);
-      background: rgba(93, 64, 51, 0.8);
-  }
-
-  .recruitment-form ::placeholder {
-      color: rgba(232, 245, 233, 0.65);   /* placeholder vert clair très doux */
-      opacity: 1;
-  }
-
-  .recruitment-form textarea {
-      resize: vertical;
-      min-height: 135px;
-  }
-
-  .btn-submit {
-      justify-self: center;
-      min-width: 240px;
-      padding: 16px 48px;
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: #e8f5e9;                     /* texte clair */
-      background: linear-gradient(135deg, #5D4037 0%, #7CB342 100%); /* brun → vert clair */
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 6px 20px rgba(93, 64, 51, 0.4);
-  }
-
-  .btn-submit:hover {
-      background: linear-gradient(135deg, #6D4C41 0%, #8BC34A 100%);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 35px rgba(139, 195, 74, 0.45);
-  }
-
-  .btn-submit:active {
-      transform: translateY(0);
-      box-shadow: 0 6px 20px rgba(93, 64, 51, 0.5);
-  }
-
-  /* Amélioration responsive */
-  @media (max-width: 600px) {
-      .recruitment-form {
-          gap: 18px;
-      }
-      .btn-submit {
-          min-width: 100%;
-      }
-  }
-</style>
-
-<!-- EmailJS v4 (version actuelle recommandée en 2025) -->
+<!-- EmailJS -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script type="text/javascript">
     (function(){
-        // Remplace par TA vraie clé publique EmailJS (commence généralement par "user_")
-        emailjs.init({
-            publicKey: "6L-ydM-QqXPbFZcvj"   // ← VÉRIFIE QUE C'EST LA BONNE !
-        });
+        emailjs.init({ publicKey: "6L-ydM-QqXPbFZcvj" });
     })();
-
     document.getElementById('recruitmentForm').addEventListener('submit', function(event) {
         event.preventDefault();
-
         const btn = this.querySelector('.btn-submit');
         const originalText = btn.textContent;
-
         btn.disabled = true;
         btn.textContent = "Envoi en cours...";
-
         emailjs.sendForm('service_jmutfi8', 'template_7h4yxpp', this)
             .then(() => {
                 alert("Candidature envoyée avec succès !\nOn te recontacte très vite sur Discord.");
@@ -1349,13 +1171,11 @@
             });
     });
 </script>
-
 <!-- BOUTIQUE -->
 <section class="section container" id="boutique">
     <h2 style="color:#A5FF8D; text-shadow: 0 0 20px rgba(165,255,140,0.4);">BOUTIQUE</h2>
     <p style="color:white;">SOON...</p>
 </section>
-
 <footer>
     <div class="container">
         <div class="social-icons">
@@ -1367,7 +1187,6 @@
         <p style="color:white;">© WOODX e-Sport. Tous droits reserves.</p>
     </div>
 </footer>
-
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script>
     particlesJS("particles-js", {
@@ -1390,7 +1209,10 @@
 
     function scrollToSection(id) {
         document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-        if (window.innerWidth <= 1024) toggleMobileMenu();
+        // Ferme le menu si on est sur mobile
+        if (window.innerWidth <= 1024) {
+            toggleMobileMenu();
+        }
     }
 
     window.addEventListener('scroll', () => {
@@ -1402,10 +1224,8 @@
             if (entry.isIntersecting) entry.target.classList.add('visible');
         });
     });
-
     document.querySelectorAll('.section').forEach(sec => observer.observe(sec));
 
-    // Parallax souris
     document.addEventListener('mousemove', function(e) {
         const mouseX = e.clientX;
         const mouseY = e.clientY;
@@ -1414,7 +1234,7 @@
         document.body.style.backgroundPosition = `calc(50% + ${moveX}px) calc(50% + ${moveY}px)`;
     });
 
-    // MENU + PLEIN ÉCRAN
+    // MENU + PLEIN ÉCRAN (ton code original reste inchangé ici)
     const openBtn = document.getElementById('open-menu-btn');
     const menu = document.getElementById('menu-posts');
     const closeMenuBtn = document.getElementById('close-menu');
@@ -1424,15 +1244,19 @@
     const fullText = document.getElementById('full-text');
     const closeFullBtn = document.getElementById('close-full');
 
-    openBtn.addEventListener('click', () => {
-        menu.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-    });
+    if (openBtn) {
+        openBtn.addEventListener('click', () => {
+            menu.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    }
 
-    closeMenuBtn.addEventListener('click', () => {
-        menu.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    });
+    if (closeMenuBtn) {
+        closeMenuBtn.addEventListener('click', () => {
+            menu.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    }
 
     document.querySelectorAll('.complete-mini-card').forEach(card => {
         card.addEventListener('click', () => {
@@ -1444,18 +1268,12 @@
         });
     });
 
-    closeFullBtn.addEventListener('click', () => {
-        fullPost.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    });
+    if (closeFullBtn) {
+        closeFullBtn.addEventListener('click', () => {
+            fullPost.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    }
 </script>
 </body>
 </html>
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-
-
