@@ -1068,7 +1068,7 @@
       </div>
     </div>
 </section>
-<!-- RECRUTEMENT -->
+refait ce code garde les <!-- RECRUTEMENT -->
 <section class="section container" id="recrutement">
     <h2 style="color:#A5FF8D; text-shadow: 0 0 20px rgba(165,255,140,0.4);">NOUS REJOINDRE ?</h2>
     <p style="color:white;">Le recrutement est ouvert ! Postule maintenant et montre-nous ton niveau.</p>
@@ -1148,7 +1148,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script type="text/javascript">
     (function(){
-        emailjs.init({ publicKey: "JhmrzFurAZhVqGiYC" });
+        emailjs.init({ publicKey: "6L-ydM-QqXPbFZcvj" });
     })();
     document.getElementById('recruitmentForm').addEventListener('submit', function(event) {
         event.preventDefault();
@@ -1156,7 +1156,7 @@
         const originalText = btn.textContent;
         btn.disabled = true;
         btn.textContent = "Envoi en cours...";
-        emailjs.sendForm('service_m9gic4v', 'template_n5jgx85', this)
+        emailjs.sendForm('service_jmutfi8', 'template_7h4yxpp', this)
             .then(() => {
                 alert("Candidature envoyée avec succès !\nOn te recontacte très vite sur Discord.");
                 this.reset();
@@ -1277,5 +1277,6 @@
 </script>
 </body>
 </html>
+
 
 
