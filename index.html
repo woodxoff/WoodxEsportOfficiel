@@ -847,109 +847,117 @@
     </div>
 </section>
 
-<!-- RECRUTEMENT -->
-<section class="section container" id="recrutement">
-    <h2 style="color:#ffc0cb; text-shadow: 0 0 20px rgba(255,192,203,0.4);">NOUS REJOINDRE ?</h2>
-    <p style="color:white;">Le recrutement est ouvert ! Postule maintenant et montre-nous ton niveau.</p>
-    <form class="recruitment-form" id="recruitmentForm">
-        <input type="text" name="pseudo" placeholder="Pseudo Epic Games" required style="color:white;">
-        <input type="number" name="age" placeholder="Âge" min="13" required style="color:white;">
-        <input type="text" name="rang" placeholder="Rang actuel (Elite, Champion, Unreal...)" required style="color:white;">
-        <input type="text" name="discord" placeholder="Discord (pseudo#1234)" required style="color:white;">
-        <input type="url" name="tracker" placeholder="Lien Fortnite Tracker" required style="color:white;">
-        <textarea name="message" rows="7" placeholder="Pourquoi veux-tu rejoindre WoodX ? (expérience, stats, motivations...)" required style="color:white;"></textarea>
-        <button type="submit" class="btn-submit" style="color:white;">Postuler maintenant</button>
-    </form>
+<section id="recrutement" style="max-width:760px; margin: 60px auto 0;">
+  <h2 style="color:#ffc0cb; text-shadow: 0 0 20px rgba(255,192,203,0.4); text-align:center;">
+    NOUS REJOINDRE ?
+  </h2>
+  <p style="color:white; text-align:center;">Le recrutement est ouvert ! Postule maintenant.</p>
+  <form id="recruitmentForm" style="display:grid; gap:22px;">
+    <input name="pseudo" placeholder="Pseudo Epic Games" required>
+    <input type="number" name="age" min="13" placeholder="Âge" required>
+    <input name="rang" placeholder="Rang actuel" required>
+    <input name="discord" placeholder="Discord (pseudo#1234)" required>
+    <input type="url" name="tracker" placeholder="Lien Fortnite Tracker" required>
+    <textarea name="message" placeholder="Pourquoi veux-tu rejoindre WoodX ?" required rows="7"></textarea>
+    <button type="submit">
+      Postuler maintenant
+    </button>
+  </form>
 </section>
 
 <style>
-    .recruitment-form {
-        max-width: 760px;
-        margin: 60px auto 0;
-        display: grid;
-        gap: 22px;
-    }
-    .recruitment-form input,
-    .recruitment-form textarea {
-        padding: 16px 20px;
-        font-size: 1.05rem;
-        color: white;
-        background: rgba(194,24,91,0.25);
-        border: 1px solid #ff69b4;
-        border-radius: 12px;
-        transition: all 0.25s ease;
-        font-family: 'Roboto', sans-serif;
-    }
-    .recruitment-form input:focus,
-    .recruitment-form textarea:focus {
-        outline: none;
-        border-color: #ff4081;
-        box-shadow: 0 0 0 3px rgba(255,105,180,0.35);
-        background: rgba(194,24,91,0.4);
-    }
-    .recruitment-form ::placeholder {
-        color: rgba(255,255,255,0.65);
-        opacity: 1;
-    }
-    .recruitment-form textarea {
-        resize: vertical;
-        min-height: 135px;
-    }
-    .btn-submit {
-        justify-self: center;
-        min-width: 240px;
-        padding: 16px 48px;
-        font-size: 1.15rem;
-        font-weight: 600;
-        color: white;
-        background: linear-gradient(135deg, #c2185b 0%, #ff69b4 100%);
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 6px 20px rgba(194,24,91,0.4);
-    }
-    .btn-submit:hover {
-        background: linear-gradient(135deg, #d81b60 0%, #ff4081 100%);
-        transform: translateY(-3px);
-        box-shadow: 0 12px 35px rgba(255,105,180,0.45);
-    }
-    .btn-submit:active {
-        transform: translateY(0);
-        box-shadow: 0 6px 20px rgba(194,24,91,0.5);
-    }
-    @media (max-width: 600px) {
-        .recruitment-form { gap: 18px; }
-        .btn-submit { min-width: 100%; }
-    }
+/* Formulaire styles */
+#recruitmentForm input,
+#recruitmentForm textarea {
+  padding:16px 20px;
+  font-size:1.05rem;
+  color: white; /* texte saisi en blanc */
+  background: rgba(194,24,91,0.25);
+  border: 1px solid #ff69b4;
+  border-radius:12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Placeholder en blanc */
+#recruitmentForm input::placeholder,
+#recruitmentForm textarea::placeholder {
+  color: white;
+  opacity: 1; /* obligatoire pour certains navigateurs */
+}
+
+/* Bouton */
+#recruitmentForm button {
+  padding:16px 48px;
+  font-size:1.15rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight:600;
+  color:white;
+  background:linear-gradient(135deg, #c2185b 0%, #ff69b4 100%);
+  border:none;
+  border-radius:50px;
+  cursor:pointer;
+  box-shadow: 0 6px 20px rgba(194,24,91,0.4);
+  transition: all 0.3s ease;
+  min-width:240px;
+  justify-self:center;
+}
+
+#recruitmentForm button:hover {
+  background: linear-gradient(135deg, #d81b60 0%, #ff4081 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(255,105,180,0.45);
+}
+
+#recruitmentForm button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 20px rgba(194,24,91,0.5);
+}
 </style>
 
-<!-- EmailJS -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script type="text/javascript">
-    (function(){
-        emailjs.init({ publicKey: "JhmrzFurAZhVqGiYC" });
-    })();
-    document.getElementById('recruitmentForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        const btn = this.querySelector('.btn-submit');
-        const originalText = btn.textContent;
-        btn.disabled = true;
-        btn.textContent = "Envoi en cours...";
-        emailjs.sendForm('service_m9gic4v', 'template_n5jgx85', this)
-            .then(() => {
-                alert("Candidature envoyée avec succès !\nOn te recontacte très vite sur Discord.");
-                this.reset();
-                btn.disabled = false;
-                btn.textContent = originalText;
-            })
-            .catch((error) => {
-                alert("Erreur lors de l'envoi.\nVérifie ta connexion ou réessaie plus tard.");
-                console.error("EmailJS →", error);
-                btn.disabled = false;
-                btn.textContent = originalText;
-            });
+<script>
+  const WEBHOOK_URL = "https://discord.com/api/webhooks/1468627194040418325/-M8tqw9boVvQWMZ9Aaw55uqYOYMYcO78ZQLg_082pFEQ7xfNxubF-lC0lMyg8ZDXeARr";
+
+  document.getElementById("recruitmentForm").addEventListener("submit", e => {
+    e.preventDefault();
+
+    const form = e.target;
+    const btn = form.querySelector("button");
+    btn.disabled = true;
+    btn.textContent = "Envoi...";
+
+    const data = new FormData(form);
+
+    fetch(WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: "WoodX Recrutement",
+        embeds: [{
+          title: "🔥 Nouvelle candidature",
+          color: 16738740,
+          fields: [
+            { name: "🎮 Pseudo", value: data.get("pseudo"), inline: true },
+            { name: "🎂 Âge", value: data.get("age"), inline: true },
+            { name: "🏆 Rang", value: data.get("rang"), inline: true },
+            { name: "💬 Discord", value: data.get("discord"), inline: true },
+            { name: "📊 Tracker", value: data.get("tracker") },
+            { name: "📝 Motivation", value: data.get("message") }
+          ],
+          footer: { text: "Candidature envoyée depuis le site" },
+          timestamp: new Date()
+        }]
+      })
+    })
+    .then(() => {
+      alert("Candidature envoyée ✅");
+      form.reset();
+    })
+    .catch(() => alert("Erreur ❌"))
+    .finally(() => {
+      btn.disabled = false;
+      btn.textContent = "Postuler maintenant";
     });
+  });
 </script>
 
 <!-- BOUTIQUE -->
@@ -1051,6 +1059,7 @@
 </script>
 </body>
 </html>
+
 
 
 
